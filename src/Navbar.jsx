@@ -3,7 +3,17 @@ import './Navbar.css';
 
 function Navbar() {
   const handleNavClick = (section) => {
-    alert(`You clicked on ${section}`);
+    // Check if the gtag function is available
+    if (typeof window.gtag === 'function') {
+      // Send a custom event for the navigation link click
+      window.gtag('event', 'nav_link_click', {
+        'event_category': 'Navigation',
+        'event_label': section // This will be 'Home', 'About', or 'Contact'
+      });
+    }
+
+    // You can keep or remove the alert. For production, you'd remove it.
+    // alert(`You clicked on ${section}`); 
   };
 
   return (
@@ -18,4 +28,4 @@ function Navbar() {
   );
 }
 
-export default Navbar; 
+export default Navbar;
