@@ -1,0 +1,137 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  width: 100vw;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%);
+}
+
+#root {
+  min-height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  width: 100vw;
+  padding: 0 2vw;
+  box-sizing: border-box;
+}
+
+.home {
+  padding: 2rem 0;
+  background: transparent;
+  min-height: 70vh;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 1.5rem;
+  margin: 1rem 0;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+}
+
+.card-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.card-title {
+  margin: 1rem 0 0.5rem 0;
+  font-size: 1.3rem;
+  color: #222;
+}
+
+.card-description {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card-btn {
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-weight: 500;
+}
+
+.card-btn:hover {
+  background: #61dafb;
+  color: #222;
+}
+
+.navbar, .footer {
+  width: 100vw;
+  margin-left: calc(-1 * (100vw - 100%) / 2);
+  box-sizing: border-box;
+}
+
+.navbar {
+  background: #222;
+  color: #fff;
+  padding: 1.2rem 2vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+
+.navbar-links li a:hover {
+  color: #61dafb;
+}
+
+.footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 1.2rem 0;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  position: relative;
+  bottom: 0;
+  left: 0;
+}
